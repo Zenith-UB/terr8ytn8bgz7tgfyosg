@@ -7359,7 +7359,7 @@ try {
 	crossOriginIsolated ||
 		console.log("not crossoriginisolated: using service worker");
 	const s = await navigator.serviceWorker.register("sw.js", {
-		scope: "/stuff/selfhosted/terraria/",
+		scope: "../",
 	});
 	s.installing
 		? console.log("Service worker installing")
