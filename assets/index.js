@@ -7358,7 +7358,7 @@ hookfmod();
 try {
 	crossOriginIsolated ||
 		console.log("not crossoriginisolated: using service worker");
-	const s = await navigator.serviceWorker.register("/stuff/selfhosted/terraria/sw.js", {
+	const s = await navigator.serviceWorker.register("sw.js", {
 		scope: "/stuff/selfhosted/terraria/",
 	});
 	s.installing
@@ -7372,7 +7372,7 @@ try {
 } catch (s) {
 	console.error(`Registration failed with ${s}`);
 }
-const wasm = await eval('import("../_framework/dotnet.js")'),
+const wasm = await eval('import("../framework/dotnet.js")'),
 	dotnet = wasm.dotnet;
 window.wasm = wasm;
 let exports;
